@@ -11,6 +11,11 @@
 		F31552C129ADBE7000CE5920 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31552C029ADBE7000CE5920 /* ContentView.swift */; };
 		F31552C329ADBE7100CE5920 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F31552C229ADBE7100CE5920 /* Assets.xcassets */; };
 		F31552C629ADBE7100CE5920 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F31552C529ADBE7100CE5920 /* Preview Assets.xcassets */; };
+		F31552CD29ADBEF100CE5920 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F31552CC29ADBEF100CE5920 /* GoogleService-Info.plist */; };
+		F31552D029ADBF7B00CE5920 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F31552CF29ADBF7B00CE5920 /* FirebaseFirestore */; };
+		F31552D229ADBF7B00CE5920 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F31552D129ADBF7B00CE5920 /* FirebaseFirestoreSwift */; };
+		F31552D529ADC11B00CE5920 /* ChatDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31552D429ADC11B00CE5920 /* ChatDataManager.swift */; };
+		F31552D729ADC2FB00CE5920 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31552D629ADC2FB00CE5920 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,9 @@
 		F31552C029ADBE7000CE5920 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F31552C229ADBE7100CE5920 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F31552C529ADBE7100CE5920 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F31552CC29ADBEF100CE5920 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F31552D429ADC11B00CE5920 /* ChatDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDataManager.swift; sourceTree = "<group>"; };
+		F31552D629ADC2FB00CE5920 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F31552D029ADBF7B00CE5920 /* FirebaseFirestore in Frameworks */,
+				F31552D229ADBF7B00CE5920 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +61,8 @@
 		F31552BD29ADBE7000CE5920 /* SimpleMyChat */ = {
 			isa = PBXGroup;
 			children = (
+				F31552CC29ADBEF100CE5920 /* GoogleService-Info.plist */,
+				F31552D329ADC10100CE5920 /* Chat */,
 				F31552BE29ADBE7000CE5920 /* SimpleMyChatApp.swift */,
 				F31552C029ADBE7000CE5920 /* ContentView.swift */,
 				F31552C229ADBE7100CE5920 /* Assets.xcassets */,
@@ -65,6 +77,15 @@
 				F31552C529ADBE7100CE5920 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F31552D329ADC10100CE5920 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				F31552D429ADC11B00CE5920 /* ChatDataManager.swift */,
+				F31552D629ADC2FB00CE5920 /* File.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +104,10 @@
 			dependencies = (
 			);
 			name = SimpleMyChat;
+			packageProductDependencies = (
+				F31552CF29ADBF7B00CE5920 /* FirebaseFirestore */,
+				F31552D129ADBF7B00CE5920 /* FirebaseFirestoreSwift */,
+			);
 			productName = SimpleMyChat;
 			productReference = F31552BB29ADBE7000CE5920 /* SimpleMyChat.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +136,9 @@
 				Base,
 			);
 			mainGroup = F31552B229ADBE7000CE5920;
+			packageReferences = (
+				F31552CE29ADBF7B00CE5920 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = F31552BC29ADBE7000CE5920 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +155,7 @@
 			files = (
 				F31552C629ADBE7100CE5920 /* Preview Assets.xcassets in Resources */,
 				F31552C329ADBE7100CE5920 /* Assets.xcassets in Resources */,
+				F31552CD29ADBEF100CE5920 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +167,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F31552C129ADBE7000CE5920 /* ContentView.swift in Sources */,
+				F31552D729ADC2FB00CE5920 /* File.swift in Sources */,
+				F31552D529ADC11B00CE5920 /* ChatDataManager.swift in Sources */,
 				F31552BF29ADBE7000CE5920 /* SimpleMyChatApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +370,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F31552CE29ADBF7B00CE5920 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F31552CF29ADBF7B00CE5920 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F31552CE29ADBF7B00CE5920 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		F31552D129ADBF7B00CE5920 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F31552CE29ADBF7B00CE5920 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F31552B329ADBE7000CE5920 /* Project object */;
 }
