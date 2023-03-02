@@ -51,7 +51,7 @@ class ChatDataManager: ObservableObject {
         lastMsgID = chatMsg.id
         
         do {
-            try db.collection(ChatDataManager.CHAT_USER_KEY).document().setData(from: chatMsg)
+            try db.collection(ChatDataManager.DB_MSG_KEY).document().setData(from: chatMsg)
         } catch {
             print("Error adding Message to FireStore: \(error)")
         }
