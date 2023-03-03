@@ -28,7 +28,7 @@ struct ChatView: View {
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                     Button("Send") {
                         sendMessage()
-                    }
+                    }.disabled(typeingMessage == "")
                 }
                 .padding()
             }
@@ -39,6 +39,7 @@ struct ChatView: View {
     }
     
     func sendMessage() {
+        
         let msg = Message(id: UUID().uuidString, text: typeingMessage, received: false, timestamp: Date(), user: manager.userId)
         ChatDataManager.shared.sendMessage(msg)
         
